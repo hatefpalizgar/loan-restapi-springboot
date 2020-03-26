@@ -1,1 +1,1 @@
-# loan-restapi-springboot
+# loan-rest-springboot
