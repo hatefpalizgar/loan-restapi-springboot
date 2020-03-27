@@ -11,8 +11,8 @@ group = 'com.hatef.swedbank'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
-//tasks.build.dependsOn tasks.jib
-//jib.to.image = 'hatefpalizgar/sw-restapi-springboot-repo'
+tasks.build.dependsOn tasks.jib
+jib.to.image = 'hatefpalizgar/sw-restapi-springboot-repo'
 
 
 repositories {
