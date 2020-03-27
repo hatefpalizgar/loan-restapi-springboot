@@ -2,7 +2,7 @@
 
 # README
 
-## Swedbank Loan RESTful API 
+## Loan RESTful API 
 
 
 
