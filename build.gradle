@@ -4,11 +4,15 @@ plugins {
     id 'java'
     id "io.freefair.lombok" version "5.0.0-rc6"
     id 'jacoco'
+    id 'com.google.cloud.tools.jib' version '2.1.0'
 }
 
 group = 'com.hatef.swedbank'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+
+//tasks.build.dependsOn tasks.jib
+//jib.to.image = 'hatefpalizgar/sw-restapi-springboot-repo'
 
 
 repositories {
@@ -16,9 +20,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.1.0.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.2.5.RELEASE'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.2.5.RELEASE'

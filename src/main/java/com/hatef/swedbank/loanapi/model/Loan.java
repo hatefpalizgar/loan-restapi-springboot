@@ -2,7 +2,9 @@ package com.hatef.swedbank.loanapi.model;
 
 import com.hatef.swedbank.loanapi.validation.CustomerIdConstraint;
 import com.hatef.swedbank.loanapi.validation.ManagerNumberConstraint;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

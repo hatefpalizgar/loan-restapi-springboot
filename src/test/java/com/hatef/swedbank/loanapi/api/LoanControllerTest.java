@@ -1,11 +1,10 @@
-package com.hatef.swedbank.loanapi.unit;
+package com.hatef.swedbank.loanapi.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hatef.swedbank.loanapi.controller.v1.api.LoanController;
 import com.hatef.swedbank.loanapi.model.Decision;
 import com.hatef.swedbank.loanapi.model.Loan;
 import com.hatef.swedbank.loanapi.model.LoanStatToJsonMapper;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
