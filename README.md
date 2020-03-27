@@ -52,7 +52,7 @@ By default, a HTML report is generated at: `*$buildDir*/reports/test`.
 
 Coverage report is generated automatically during each build lifecycle as a task called `jacocoTestReport`. 
 
-![Task](/Users/hatefpalizgar/Downloads/loan-restapi-springboot/Task.png)
+![Task](https://github.com/hatefpalizgar/loan-restapi-springboot/blob/master/Task.png)
 
 
 
