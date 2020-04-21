@@ -29,9 +29,9 @@ public class LoanServiceImpl implements LoanService {
     @Override
     public Loan findByCustomerId(String customerId) {
         Optional<Loan> loanDb = loanRepository.findById(customerId);
-        if(loanDb.isPresent()){
+        if (loanDb.isPresent()) {
             return loanDb.get();
-        }else{
+        } else {
             throw new ResourceNotFoundException("Record not found with id : " + customerId);
         }
     }
@@ -39,7 +39,7 @@ public class LoanServiceImpl implements LoanService {
     @Override
     public Decision approve(String manager, Decision decision) {
         return decision.setStatus(LoanStatus.APPROVED)
-                .setTimeStamp(LocalDateTime.now());
+                       .setTimeStamp(LocalDateTime.now());
     }
     
     @Override
@@ -49,22 +49,10 @@ public class LoanServiceImpl implements LoanService {
     
     @Override
     public Loan update(Loan loan) {
-        Optional<Loan> loanToUpdate = loanRepository.findById(loan.getCustomerId());
-        if(loanToUpdate.isPresent()){
-            return getUpdatedLoan(loan, loanToUpdate);
-        }else{
-            throw new ResourceNotFoundException("Record not found with id : " + loan.getCustomerId());
+        if (loanRepository.findById(loan.getCustomerId()).isPresent()) {
+            loanRepository.update(loan);
+            return loan;
         }
-    }
-    
-    private Loan getUpdatedLoan(Loan loan, Optional<Loan> loanToUpdate) {
-        Loan updatedLoan = loanToUpdate.get()
-                .setCustomerId(loan.getCustomerId())
-                .setLoanAmount(loan.getLoanAmount())
-                .setManagers(loan.getManagers())
-                .setStatus(loan.getStatus())
-                .setTimeContractSent(loan.getTimeContractSent());
-        loanRepository.save(updatedLoan);
-        return updatedLoan;
+        throw new ResourceNotFoundException("Record not found with id : " + loan.getCustomerId());
     }
 }

@@ -20,7 +20,6 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.1.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.2.5.RELEASE'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.2.5.RELEASE'
