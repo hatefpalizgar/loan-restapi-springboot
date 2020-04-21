@@ -39,6 +39,14 @@ public class LoanControllerTest {
     @MockBean
     LoanController loanController;
     
+    public static String asJsonString(final Object obj) {
+        try {
+            return new ObjectMapper().writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
     public Loan setup() {
         Loan testLoan;
         Map<String, Decision> decisionMap = new HashMap<>();
@@ -56,10 +64,10 @@ public class LoanControllerTest {
         Loan loan = setup();
         given(loanController.createRequest(loan)).willReturn(new ResponseEntity<>(loan, HttpStatus.OK));
         MvcResult mvcResult = mvc.perform(post("/api/v1/loan/request")
-                .contentType(MediaType.APPLICATION_JSON)
-                .characterEncoding("utf-8")
-                .content(asJsonString(loan)))
-                .andReturn();
+                                                  .contentType(MediaType.APPLICATION_JSON)
+                                                  .characterEncoding("utf-8")
+                                                  .content(asJsonString(loan)))
+                                 .andReturn();
         assertEquals(200, mvcResult.getResponse().getStatus());
         assertEquals(asJsonString(loan), mvcResult.getResponse().getContentAsString());
     }
@@ -69,9 +77,9 @@ public class LoanControllerTest {
         Loan loan = setup();
         given(loanController.makeDecision("ALEX", loan)).willReturn(new ResponseEntity<>(loan, HttpStatus.OK));
         MvcResult mvcResult = mvc.perform(post("/api/v1/loan/ALEX/approve")
-                .contentType(MediaType.APPLICATION_JSON)
-                .characterEncoding("utf-8")
-                .content(asJsonString(loan))).andReturn();
+                                                  .contentType(MediaType.APPLICATION_JSON)
+                                                  .characterEncoding("utf-8")
+                                                  .content(asJsonString(loan))).andReturn();
         assertEquals(200, mvcResult.getResponse().getStatus());
     }
     
@@ -85,17 +93,8 @@ public class LoanControllerTest {
                 .setMin(12345.0);
         given(loanController.showStatistics(60)).willReturn(stats);
         MvcResult mvcResult = mvc.perform(get("/api/v1/loan/stats")
-                .contentType(MediaType.APPLICATION_JSON)
-                .characterEncoding("utf-8")).andReturn();
+                                                  .contentType(MediaType.APPLICATION_JSON)
+                                                  .characterEncoding("utf-8")).andReturn();
         assertEquals(asJsonString(stats), mvcResult.getResponse().getContentAsString());
-    }
-    
-    
-    public static String asJsonString(final Object obj) {
-        try {
-            return new ObjectMapper().writeValueAsString(obj);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
 }

@@ -67,17 +67,17 @@ public class LoanController {
     private void loanValidateAndApprove(@PathVariable String manager, @RequestBody @Valid Loan loan) {
         String customerId = loan.getCustomerId();
         Optional<Loan> loanToDecide = Optional.ofNullable(loanService.findByCustomerId(customerId));
-        if(loanToDecide.isPresent() && loan.getManagers().contains(manager)){
+        if (loanToDecide.isPresent() && loan.getManagers().contains(manager)) {
             loan.getDecisionMap().computeIfPresent(manager, loanService::approve);
-        }else if(! loan.getManagers().contains(manager)){
+        } else if (!loan.getManagers().contains(manager)) {
             throw new ResourceNotFoundException(String.format("Manager with name: '%s' not found", manager));
-        }else{
+        } else {
             throw new ResourceNotFoundException(String.format("Loan for customer id: '%s' not found", customerId));
         }
     }
     
     private void sendLoanToCustomer(@RequestBody @Valid Loan loan) {
-        if(loan.getDecisionMap().values().stream().allMatch(v -> v.getStatus() == APPROVED)){
+        if (loan.getDecisionMap().values().stream().allMatch(v -> v.getStatus() == APPROVED)) {
             loan.setStatus(SENT).setTimeContractSent(now());
         }
         loanService.update(loan);

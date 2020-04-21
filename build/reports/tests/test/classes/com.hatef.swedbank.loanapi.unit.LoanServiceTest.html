@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.318s</div>
+<div class="counter">0.200s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,27 +79,27 @@
 </thead>
 <tr>
 <td class="success">findByExistingCustomerId_shouldReturnLoan</td>
-<td class="success">0.026s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findByInvalidCustomerId_shouldThrowException</td>
-<td class="success">0.174s</td>
+<td class="success">0.175s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenLoanService_ShouldReturnLoanSaved</td>
-<td class="success">0.058s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenLoanToUpdate_shouldExistInLoans</td>
-<td class="success">0.008s</td>
+<td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenManagerApproved_loanStatusShouldUpdate</td>
-<td class="success">0.052s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,31 +107,31 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:15:08.393 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:08.409 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-23:15:08.431 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-23:15:08.511 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-23:15:08.547 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest], using SpringBootContextLoader
-23:15:08.556 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: class path resource [com/hatef/swedbank/loanapi/unit/LoanServiceTest-context.xml] does not exist
-23:15:08.557 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: class path resource [com/hatef/swedbank/loanapi/unit/LoanServiceTestContext.groovy] does not exist
-23:15:08.558 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-23:15:08.561 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: LoanServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:15:08.652 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:08.807 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/hatefpalizgar/Downloads/loan-restapi-springboot/build/classes/java/main/com/hatef/swedbank/loanapi/LoanapiApplication.class]
-23:15:08.810 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.hatef.swedbank.loanapi.LoanapiApplication for test class com.hatef.swedbank.loanapi.unit.LoanServiceTest
-23:15:09.171 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: using defaults.
-23:15:09.175 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-23:15:09.211 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-23:15:09.213 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-23:15:09.216 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@68f1fd72, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ddec590, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@25a5bf07, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13fb040f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7486716f, org.springframework.test.context.event.EventPublishingTestExecutionListener@6f6fc82a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@673a1f47, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2c2ab4d3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6b60a530, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a5f0eee, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d28f6c5]
-23:15:09.222 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:09.224 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:09.225 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:09.225 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:09.232 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4fc3def0 testClass = LoanServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@443664a9 testClass = LoanServiceTest, locations = '{}', classes = '{class com.hatef.swedbank.loanapi.LoanapiApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3f8260f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@60ea7dda, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51760452, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@53e415e2, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@74661ce4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
-23:15:09.236 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:09.241 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
-23:15:09.299 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+<pre>23:17:31.653 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:31.717 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+23:17:31.795 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+23:17:31.913 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+23:17:31.972 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest], using SpringBootContextLoader
+23:17:31.982 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: class path resource [com/hatef/swedbank/loanapi/unit/LoanServiceTest-context.xml] does not exist
+23:17:31.982 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: class path resource [com/hatef/swedbank/loanapi/unit/LoanServiceTestContext.groovy] does not exist
+23:17:31.983 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+23:17:31.984 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: LoanServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:17:32.106 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.312 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/hatefpalizgar/Downloads/loan-restapi-springboot/build/classes/java/main/com/hatef/swedbank/loanapi/LoanapiApplication.class]
+23:17:32.313 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.hatef.swedbank.loanapi.LoanapiApplication for test class com.hatef.swedbank.loanapi.unit.LoanServiceTest
+23:17:32.564 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]: using defaults.
+23:17:32.565 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+23:17:32.590 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+23:17:32.591 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+23:17:32.592 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@68f1fd72, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ddec590, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@25a5bf07, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13fb040f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7486716f, org.springframework.test.context.event.EventPublishingTestExecutionListener@6f6fc82a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@673a1f47, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2c2ab4d3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6b60a530, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a5f0eee, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4d28f6c5]
+23:17:32.597 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.599 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.600 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.601 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.609 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4fc3def0 testClass = LoanServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@443664a9 testClass = LoanServiceTest, locations = '{}', classes = '{class com.hatef.swedbank.loanapi.LoanapiApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3f8260f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@60ea7dda, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@51760452, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@53e415e2, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@74661ce4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+23:17:32.612 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.613 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hatef.swedbank.loanapi.unit.LoanServiceTest]
+23:17:32.686 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -141,10 +141,10 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.5.RELEASE)
 
-2020-04-21 23:15:09.934  INFO 13643 --- [    Test worker] c.h.s.loanapi.unit.LoanServiceTest       : Starting LoanServiceTest on MacBook-Pro.local with PID 13643 (started by hatefpalizgar in /Users/hatefpalizgar/Downloads/loan-restapi-springboot)
-2020-04-21 23:15:09.944  INFO 13643 --- [    Test worker] c.h.s.loanapi.unit.LoanServiceTest       : No active profile set, falling back to default profiles: default
-2020-04-21 23:15:13.012  INFO 13643 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-21 23:15:13.412  INFO 13643 --- [    Test worker] c.h.s.loanapi.unit.LoanServiceTest       : Started LoanServiceTest in 4.095 seconds (JVM running for 6.343)
+2020-04-21 23:17:33.272  INFO 13853 --- [    Test worker] c.h.s.loanapi.unit.LoanServiceTest       : Starting LoanServiceTest on MacBook-Pro.local with PID 13853 (started by hatefpalizgar in /Users/hatefpalizgar/Downloads/loan-restapi-springboot)
+2020-04-21 23:17:33.274  INFO 13853 --- [    Test worker] c.h.s.loanapi.unit.LoanServiceTest       : No active profile set, falling back to default profiles: default
+2020-04-21 23:17:36.084  INFO 13853 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-21 23:17:36.459  INFO 13853 --- [    Test worker] c.h.s.loanapi.unit.LoanServiceTest       : Started LoanServiceTest in 3.745 seconds (JVM running for 6.423)
 </pre>
 </span>
 </div>
@@ -156,7 +156,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.2.2</a> at 21-Apr-2020 23:15:15</p>
+<a href="http://www.gradle.org">Gradle 6.2.2</a> at 21-Apr-2020 23:17:38</p>
 </div>
 </div>
 </body>
