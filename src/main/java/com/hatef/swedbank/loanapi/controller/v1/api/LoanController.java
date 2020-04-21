@@ -4,7 +4,6 @@ import com.hatef.swedbank.loanapi.exception.ResourceNotFoundException;
 import com.hatef.swedbank.loanapi.model.Decision;
 import com.hatef.swedbank.loanapi.model.Loan;
 import com.hatef.swedbank.loanapi.model.LoanStatToJsonMapper;
-import com.hatef.swedbank.loanapi.model.LoanStatus;
 import com.hatef.swedbank.loanapi.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +20,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
+import static com.hatef.swedbank.loanapi.model.LoanStatus.*;
 import static java.time.LocalDateTime.now;
 
 
@@ -58,8 +58,8 @@ public class LoanController {
     }
     
     private void initializeLoan(@RequestBody @Valid Loan loan) {
-        loan.setStatus(LoanStatus.PENDING).getManagers().forEach(m -> {
-            loan.getDecisionMap().put(m, new Decision(LoanStatus.PENDING, now()));
+        loan.setStatus(PENDING).getManagers().forEach(m -> {
+            loan.getDecisionMap().put(m, new Decision(PENDING, now()));
         });
         loanService.save(loan);
     }
@@ -77,8 +77,8 @@ public class LoanController {
     }
     
     private void sendLoanToCustomer(@RequestBody @Valid Loan loan) {
-        if(loan.getDecisionMap().values().stream().allMatch(v -> v.getStatus() == LoanStatus.APPROVED)){
-            loan.setStatus(LoanStatus.SENT).setTimeContractSent(now());
+        if(loan.getDecisionMap().values().stream().allMatch(v -> v.getStatus() == APPROVED)){
+            loan.setStatus(SENT).setTimeContractSent(now());
         }
         loanService.update(loan);
     }
@@ -87,8 +87,11 @@ public class LoanController {
         return loanService
                 .findAll()
                 .stream()
-                .filter(l -> l.getStatus() == LoanStatus.SENT)
-                .filter(l -> Math.abs(ChronoUnit.SECONDS.between(l.getTimeContractSent(), now())) <= timeout)
+                .filter(l -> l.getStatus() == SENT)
+                .filter(l -> {
+                    assert l.getTimeContractSent() != null;
+                    return Math.abs(ChronoUnit.SECONDS.between(l.getTimeContractSent(), now())) <= timeout;
+                })
                 .collect(Collectors.toCollection(ArrayList::new));
     }
     
