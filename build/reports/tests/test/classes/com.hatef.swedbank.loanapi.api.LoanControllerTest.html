@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.510s</div>
+<div class="counter">0.373s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,17 +79,17 @@
 </thead>
 <tr>
 <td class="success">givenLoanDetails_whenSendRequest_thenReturnLoanRequest</td>
-<td class="success">0.026s</td>
+<td class="success">0.019s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenLoanRequest_whenManagerApproves_thenChangeLoanStatusToApproved</td>
-<td class="success">0.197s</td>
+<td class="success">0.177s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">givenSomeLoanIsSentRecently_shouldReturnStatistics</td>
-<td class="success">0.287s</td>
+<td class="success">0.177s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -97,12 +97,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2020-04-21 23:17:36.707  INFO 13853 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hatef.swedbank.loanapi.api.LoanControllerTest], using SpringBootContextLoader
-2020-04-21 23:17:36.708  INFO 13853 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.hatef.swedbank.loanapi.api.LoanControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-04-21 23:17:36.708  INFO 13853 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hatef.swedbank.loanapi.api.LoanControllerTest]: LoanControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-04-21 23:17:36.812  INFO 13853 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hatef.swedbank.loanapi.LoanapiApplication for test class com.hatef.swedbank.loanapi.api.LoanControllerTest
-2020-04-21 23:17:36.814  INFO 13853 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-04-21 23:17:36.816  INFO 13853 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f54f168, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b8442ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@299b0fb0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39a8b1ec, org.springframework.test.context.support.DirtiesContextTestExecutionListener@418fd800, org.springframework.test.context.event.EventPublishingTestExecutionListener@4897c319, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3980a334, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@45db4239, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a2bcd5a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c52460d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3077cdb0]
+<pre>2020-04-21 23:45:06.476  INFO 15345 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hatef.swedbank.loanapi.api.LoanControllerTest], using SpringBootContextLoader
+2020-04-21 23:45:06.476  INFO 15345 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.hatef.swedbank.loanapi.api.LoanControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-21 23:45:06.477  INFO 15345 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.hatef.swedbank.loanapi.api.LoanControllerTest]: LoanControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-21 23:45:06.500  INFO 15345 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.hatef.swedbank.loanapi.LoanapiApplication for test class com.hatef.swedbank.loanapi.api.LoanControllerTest
+2020-04-21 23:45:06.501  INFO 15345 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-21 23:45:06.503  INFO 15345 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@53ea37d1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a1e8e53, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@35e57f13, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1f559e8c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d036608, org.springframework.test.context.event.EventPublishingTestExecutionListener@13e10fed, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d62f765, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3ef0b9bb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3845bb4b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@23c045c9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3983470b]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -112,13 +112,13 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.5.RELEASE)
 
-2020-04-21 23:17:36.890  INFO 13853 --- [    Test worker] c.h.s.loanapi.api.LoanControllerTest     : Starting LoanControllerTest on MacBook-Pro.local with PID 13853 (started by hatefpalizgar in /Users/hatefpalizgar/Downloads/loan-restapi-springboot)
-2020-04-21 23:17:36.892  INFO 13853 --- [    Test worker] c.h.s.loanapi.api.LoanControllerTest     : No active profile set, falling back to default profiles: default
-2020-04-21 23:17:37.259  INFO 13853 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-21 23:17:37.393  INFO 13853 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2020-04-21 23:17:37.394  INFO 13853 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2020-04-21 23:17:37.407  INFO 13853 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 13 ms
-2020-04-21 23:17:37.440  INFO 13853 --- [    Test worker] c.h.s.loanapi.api.LoanControllerTest     : Started LoanControllerTest in 0.621 seconds (JVM running for 7.404)
+2020-04-21 23:45:06.540  INFO 15345 --- [    Test worker] c.h.s.loanapi.api.LoanControllerTest     : Starting LoanControllerTest on MacBook-Pro.local with PID 15345 (started by hatefpalizgar in /Users/hatefpalizgar/Downloads/loan-restapi-springboot)
+2020-04-21 23:45:06.542  INFO 15345 --- [    Test worker] c.h.s.loanapi.api.LoanControllerTest     : No active profile set, falling back to default profiles: default
+2020-04-21 23:45:06.846  INFO 15345 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-21 23:45:06.985  INFO 15345 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-04-21 23:45:06.985  INFO 15345 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-04-21 23:45:06.998  INFO 15345 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 13 ms
+2020-04-21 23:45:07.012  INFO 15345 --- [    Test worker] c.h.s.loanapi.api.LoanControllerTest     : Started LoanControllerTest in 0.506 seconds (JVM running for 6.156)
 </pre>
 </span>
 </div>
@@ -130,7 +130,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.2.2</a> at 21-Apr-2020 23:17:38</p>
+<a href="http://www.gradle.org">Gradle 6.2.2</a> at 21-Apr-2020 23:45:07</p>
 </div>
 </div>
 </body>
